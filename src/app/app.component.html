@@ -1,0 +1,32 @@
+<router-outlet></router-outlet>
+<h1>{{ title }}</h1>
+<button [class]="bandboton ? 'btnazul' : 'btnverde'" (click)="HolaMundo('Hola Mundo')">Prueba botón</button>
+<br><br>
+<span *ngIf="bandboton">
+  Hola soy un span
+</span>
+<span *ngFor="let numero of listaNumeros">
+  {{ numero }}
+</span>
+<br>
+<div class="user-cont">
+  <button class="btn btn-primary" (click)="getUser()">Cambiar usuario</button>
+  <br>
+  <div *ngIf="user.id !== 0; else elseBlock" [class]="user.id % 2 == 0 ? 'users1' : 'users2'">
+    <div class="card" style="width: 18rem;">
+      <img [src]="user.fotoUrl" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Nombre:</b> {{ user.nombre }}</h5>
+        <p class="card-text">
+          <span><b>Dirección:</b> {{ user.direccion }}</span><br>
+          <span><b>ID:</b> {{ user.id }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <p class="null-user">No se ha almacenado ningún usuario</p>
+  </ng-template>
+</div>
+<!-- <app-primercomponente></app-primercomponente>
+Navbar -->

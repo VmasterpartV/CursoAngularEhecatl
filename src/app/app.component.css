@@ -1,0 +1,33 @@
+.btnverde {
+    background: green;
+}
+
+.btnazul {
+    background: blue;
+}
+
+.users1 .card {
+    border: 2px red solid;
+}
+
+.users2 .card {
+    border: 2px blue solid;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.user-cont {
+    margin: 20px;
+}
+
+.null-user {
+    margin-top: 10px;
+}
