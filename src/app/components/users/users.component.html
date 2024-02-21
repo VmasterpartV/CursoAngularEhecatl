@@ -1,0 +1,24 @@
+<div class="container p-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Actions</th> <!-- Nueva columna para el botón de editar -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersList">
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.number }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a class="btn btn-primary" [routerLink]="['/edit-user', user.name, user.age, user.number, user.email]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
