@@ -3,10 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrimercomponenteComponent } from './components/primercomponente/primercomponente.component';
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserComponent } from './components/user/user.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 
 const routes: Routes = [
-  { path: '', component: UsersComponent },
+  { path: '', component: HomeComponent },
+  { path: 'user/:role', component: UserComponent },
+  { path: 'admin/:role', component: AdminComponent },
+  { path: 'new-user', component: NewUserComponent },
+  { path: 'users', component: UsersComponent },
   { path: 'edit-user/:name/:age/:number/:email', component: EditUserComponent },
   { path: 'primercomponente', component: PrimercomponenteComponent }
 ];

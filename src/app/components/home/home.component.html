@@ -1,0 +1,11 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Bienvenido</h2>
+            <p>Rol actual: {{ role }}</p>
+            <p>Selecciona tu tipo de usuario:</p>
+            <button class="btn" [class]="role === 'user' ? 'btn-primary' : 'btn-secondary'" (click)="changeRoleAction('user')" [disabled]="role === 'user'">Usuario</button>
+            <button class="btn mx-2" [class]="role === 'admin' ? 'btn-primary' : 'btn-secondary'" (click)="changeRoleAction('admin')" [disabled]="role === 'admin'">Administrador</button>
+        </div>
+    </div>
+</div>

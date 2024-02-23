@@ -12,3 +12,13 @@ export interface User {
     email: string;
     hasNumber: boolean;
 }
+
+export interface NewUser {
+    name: string;
+    firstLastName: string;
+    secondLastName: string;
+    email: string;
+    password: string;
+    role: string;
+    image: string;
+}

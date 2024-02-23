@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center">
+    <form [formGroup]="newUserForm" class="card p-4 col-md-6">
+        <h2 class="title">Nuevo Usuario</h2><br>
+        <div class="row">
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+                <small *ngIf="newUserForm.get('name').hasError('required')" class="text-danger">
+                    El nombre es requerido
+                </small>
+            </div>
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="firstLastName" class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="firstLastName" name="firstLastName" formControlName="firstLastName" required>
+                <small *ngIf="newUserForm.get('firstLastName').hasError('required')" class="text-danger">
+                    El primer apellido es requerido
+                </small>
+            </div>
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="secondLastName" class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="secondLastName" name="secondLastName" formControlName="secondLastName" required>
+                <small *ngIf="newUserForm.get('secondLastName').hasError('required')" class="text-danger">
+                    El segundo apellido es requerido
+                </small>
+            </div>
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" formControlName="email" required>
+                <small *ngIf="newUserForm.get('email').hasError('required')" class="text-danger">
+                    El segundo apellido es requerido
+                </small>
+                <small *ngIf="newUserForm.get('email').hasError('email')" class="text-danger">
+                    El email debe ser un email válido
+                </small>
+            </div>
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" formControlName="password" required>
+                <small *ngIf="newUserForm.get('password').hasError('required')" class="text-danger">
+                    La contraseña es requerida
+                </small>
+            </div>
+            <div class="col-sm-12 col-6 mb-3">
+                <label for="role" class="form-label">Rol</label>
+                <select class="form-select" id="role" name="role" formControlName="role" required>
+                    <option value="" disabled selected>Selecciona un rol</option>
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <small *ngIf="newUserForm.get('role').hasError('required')" class="text-danger">
+                    El rol es requerido
+                </small>
+            </div>
+            <div class="col-12 mb-4">
+                <label for="image" class="form-label">Imagen de usuario</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*" formControlName="image" required>
+                <small *ngIf="newUserForm.get('image').hasError('required')" class="text-danger">
+                    La imagen es requerida
+                </small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [class]="newUserForm.valid ? 'btn-success' : 'btn-danger'" [disabled]="newUserForm.invalid" (click)="submit()">{{ newUserForm.invalid ? 'Error con el formulario' : 'Continuar'}}</button>
+    </form>
+</div>

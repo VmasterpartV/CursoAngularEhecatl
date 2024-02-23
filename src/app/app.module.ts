@@ -7,13 +7,23 @@ import { PrimercomponenteComponent } from './components/primercomponente/primerc
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { UserComponent } from './components/user/user.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrimercomponenteComponent,
     UsersComponent,
-    EditUserComponent
+    EditUserComponent,
+    NavbarComponent,
+    HomeComponent,
+    UserComponent,
+    AdminComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,

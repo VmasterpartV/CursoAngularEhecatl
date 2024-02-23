@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CursoAngular';
+  userRole = 'user';
+
+  changeRole(role: string) {
+    this.userRole = role;
+    console.log(this.userRole);
+  }
 }
