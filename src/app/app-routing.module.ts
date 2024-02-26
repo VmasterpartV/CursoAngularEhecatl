@@ -7,10 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { PokemonsComponent } from './components/pokemons/pokemons.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: PokemonsComponent },
+  { path: 'role', component: HomeComponent },
   { path: 'user/:role', component: UserComponent },
   { path: 'admin/:role', component: AdminComponent },
   { path: 'new-user', component: NewUserComponent },

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid justify-content-between container py-1">
         <span class="navbar-brand">Curso Angular</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -8,9 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+                <a class="nav-link" [routerLink]="['/role']">Select role</a>
                 <a class="nav-link" [routerLink]="['/user', role]">User view</a>
                 <a class="nav-link" [routerLink]="['/admin', role]">Admin view</a>
             </div>
+        </div>
+        <div>
+            <button class="btn" [class]="isDarkMode ? 'btn-outline-light' : 'btn-outline-dark'" (click)="toggleDarkMode()">{{ isDarkMode ? 'Dark' : 'Light' }}</button>
         </div>
     </div>
 </nav>

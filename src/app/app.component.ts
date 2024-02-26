@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'CursoAngular';
   userRole = 'user';
 
+  constructor() { }
+
+
   changeRole(role: string) {
     this.userRole = role;
     console.log(this.userRole);
