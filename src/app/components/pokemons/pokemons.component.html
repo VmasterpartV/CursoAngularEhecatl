@@ -1,3 +1,24 @@
-<div>
-    <p>pokemons works!</p>
-</div>
+<div class="container">
+    <h2>Pokémon</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pokemon of pokemons">
+          <td class="align-middle">{{ pokemon.id }}</td>
+          <td class="align-middle"><img [src]="pokemon.image" alt="Imagen de {{ pokemon.name }}" class="img-fluid"></td>
+          <td class="align-middle">{{ pokemon.name }}</td>
+          <td class="align-middle">
+            <button class="btn btn-primary me-2" [routerLink]="['/pokemon', pokemon.id]">Editar</button>
+            <button class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

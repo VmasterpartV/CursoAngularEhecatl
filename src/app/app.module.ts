@@ -13,6 +13,8 @@ import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EditPokemonComponent } from './components/edit-pokemon/edit-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { PokemonsComponent } from './components/pokemons/pokemons.component';
     UserComponent,
     AdminComponent,
     NewUserComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    EditPokemonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

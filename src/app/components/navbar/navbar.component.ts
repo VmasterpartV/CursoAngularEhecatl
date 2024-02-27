@@ -25,7 +25,6 @@ export class NavbarComponent implements OnInit {
 
   toggleDarkMode() {
     this.darkModeService.toggleDarkMode();
-    // set data-bs-theme attribute to 'dark' or 'light' depending on the value of isDarkMode
     const theme = this.isDarkMode ? 'dark' : 'light';
     document.body.setAttribute('data-bs-theme', theme);
   }
