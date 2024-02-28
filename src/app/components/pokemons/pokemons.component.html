@@ -16,7 +16,7 @@
           <td class="align-middle">{{ pokemon.name }}</td>
           <td class="align-middle">
             <button class="btn btn-primary me-2" [routerLink]="['/pokemon', pokemon.id]">Editar</button>
-            <button class="btn btn-danger">Eliminar</button>
+            <button class="btn btn-danger" (click)="deletePokemon(pokemon.id)">Eliminar</button>
           </td>
         </tr>
       </tbody>
